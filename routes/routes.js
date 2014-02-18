@@ -1,10 +1,10 @@
 var getMain = function(req, res) {
     console.log("I change automagically")
-	res.render('index.jade');
+    res.render('test_translated');
 };
 
 var routes = {
-	main: getMain
+    main: getMain
 };
 
 module.exports = routes;
