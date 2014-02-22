@@ -1,10 +1,8 @@
-var getMain = function(req, res) {
-    console.log("I change automagically")
-    res.render('test_translated');
-};
-
+var path = require('path')
 var routes = {
-    main: getMain
+    main: function(req, res) {
+        res.sendfile(path.join(__dirname, '../public/index.html'));
+    }
 };
 
 module.exports = routes;
