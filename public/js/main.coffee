@@ -2,7 +2,7 @@ $(document).ready ->
     nonce = 1
     $('.parallax').scrolly({bgParallax: true})
     append_to_form = ->
-        $('#form-append').append('<div class="team-member"><p>Team Member ' + nonce + '<br><div class="form-group">
+        $('#form-append').append('<div class="team-member"><p>Team Member ' + (if nonce is 1 then (nonce + ' (You)') else nonce) + '<br><div class="form-group">
                 <input type="text" id="name" class="form-control" placeholder="Full Name" required="">
               </div>
               <div class="form-group">
@@ -26,37 +26,25 @@ $(document).ready ->
             $('#add-team-member').remove()
 
     $('#submit').click ->
-        submission_data = []
+        team_data = []
         $('.team-member').each (index)->
-            team_member = {}
-            team_member.name = $(this).find('#name').val()
-            team_member.year = $(this).find('#year').val()
-            team_member.major = $(this).find('#major').val()
-            team_member.email = $(this).find('#email').val()
-            team_member.comments = $(this).find('#comments').val()
-            submission_data.push team_member
-        console.log submission_data
-        $.notify('Thanks for applying!', 'success') 
-
-    # save=function(){
-    #     console.log("foo");
-    #     var name=$('#name').val();
-    #     var year=$('#year').val();
-    #     var major=$('#major').val();
-    #     var email=$('#email').val();
-    #     var comments=$('#comments').val();
-    #     emailsRef.push(email);
-    #     var hey=myRootRef.push();
-    #     hey.set({name:name,email:email, year:year, major:major,comments:comments}, function(error){
-    #         if (error){
-    #             console.log("bad");
-    #                         }
-    #                         else{
-    #                              $.notify( 'Thank you for signing up!', "success");
-    #                              $("form")[0].reset();
-    #                         }
-
-    #     });
-#     #}
-#     $('#pennapps-mentor-submit').click(save);
-# })
+            team_member =
+                name : $(this).find('#name').val()
+                year : $(this).find('#year').val()
+                major : $(this).find('#major').val()
+                email : $(this).find('#email').val()
+                comments : $(this).find('#comments').val()
+            team_data.push team_member
+        app_data = 
+            team_data : team_data
+            description: $('#description').val()
+            goals : $('#goals').val()
+            currect_stage : $('#current-stage').val()
+        console.log JSON.stringify(app_data)
+        $.post "/apps", app_data, (result)->
+            if result.error
+                $.notify('Error submitting application', 'error')
+            else
+                $.notify('Application successful - thanks!', 'success') 
+                $('input').val('')
+                $('textarea').val('')

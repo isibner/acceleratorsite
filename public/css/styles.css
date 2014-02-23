@@ -1,7 +1,13 @@
 /* Reset */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{margin-left: 30px; list-style:circle; font-size:17px; color:black;}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
 body{font:13px/1.1 "Helvetica Neue",sans-serif;}
-p{line-height:1.6;}
+p{line-height:1.6;
+}
+@font-face
+{
+font-family: hotrod;
+src: url(../hotrod.ttf);
+}
 /* Example page */
 strong{font-weight:bold;}
 header{height: 70px;
@@ -11,8 +17,14 @@ background-color: black;
 width: 100%; }
 header img{float:left;margin:5px 0 0 14px; height:100px; width:100px;}
 header h1{
-     margin-left:14px;float:left;font-size:20px;line-height:50px;
-     color:white;}
+margin-left: 10px;
+margin-top: 10px;
+float: left;
+font-size: 70px;
+line-height: 60px;
+color: #E3170D;
+font-family: hotrod;
+text-shadow: 1px 1px #555, -1px -1px #555, 1px -1px #555, -1px 1px #555, 1px 1px #555;}
 
 section {
     min-height: 750px;
@@ -21,6 +33,10 @@ section {
     min-width: 1000px;
     margin: 0;
     padding: 0;
+}
+
+section #signup{
+    padding-bottom: 50px;
 }
 
 section:nth-of-type(1){background:whitesmoke;height:750px;}
@@ -36,12 +52,12 @@ section:nth-of-type(2){background:black;height:750px;}
 }
 
 #story-freext>div:nth-of-type(2) {
-    background: url(../img/ask2.png) 50% 0 no-repeat;
+    background: url(../img/test.png) 50% 0 no-repeat;
     background-size: 200px 200px;
     margin: 0;
     height: 750px;
     position:absolute;
-    top:0px;left:200px;
+    top:0px;left:250px;
     width:40%;
 }
 
@@ -51,16 +67,16 @@ section:nth-of-type(2){background:black;height:750px;}
     margin: 0;
     height: 750px;
     position:absolute;
-    top:75px;left:320px;
+    top:60px;left:370px;
     width:70%;
 }
 #story-freext>div:nth-of-type(4) {
-    background: url(../img/hack2.png) 50% 0 no-repeat;
+    background: url(../img/invest.png) 50% 0 no-repeat;
     background-size: 200px 200px;
     margin: 0;
     height: 750px;
     position:absolute;
-    top:125px;left:420px;
+    top:125px;left:470px;
     width:100%;
 }
 #bottle>div:nth-of-type(1){
@@ -72,12 +88,23 @@ section:nth-of-type(2){background:black;height:750px;}
     width:100%;   
 }
 #bottle>div:nth-of-type(2){
-    background: url(../img/logo3.png) 40% 0 no-repeat;
+    background: url(../img/logo2.png) 40% 0 no-repeat;
     margin: 0;
     height: 750px;
     position:absolute;
-    top:50px;left:370px;
-    width:40%;
+    top:50px;
+    width:100%;
+    font-family: hotrod;
+}
+#bottle>div:nth-of-type(3){
+margin: 0 auto;
+ display: inline-block;
+    height: 50px;
+    position:absolute;
+    top:400px;
+    width:100%;
+
+    font-family: hotrod;
 }
 #tracks>div:nth-of-type(1) {
     background:#d33;
@@ -89,31 +116,31 @@ section:nth-of-type(2){background:black;height:750px;}
 }
 
 #tracks>div:nth-of-type(2) {
-    background: url(../img/code2.png) 50% 0 no-repeat;
+    background: url(../img/hack2.png) 50% 0 no-repeat;
     background-size: 200px 200px;
     margin: 0;
     height: 750px;
     position:absolute;
-    top:0px;left:200px;
+    top:0px;left:250px;
     width:40%;
 }
 
 #tracks>div:nth-of-type(3) {
-    background: url(../img/gears2.png) 50% 0 no-repeat;
+    background: url(../img/network.png) 50% 0 no-repeat;
     background-size: 200px 200px;
     margin: 0;
     height: 750px;
     position:absolute;
-    top:50px;left:320px;
+    top:50px;left:370px;
     width:70%;
 }
 #tracks>div:nth-of-type(4) {
-    background: url(../img/mobile2.png) 50% 0 no-repeat;
+    background: url(../img/Dollar-sign.png) 50% 0 no-repeat;
     background-size: 200px 200px;
     margin: 0;
     height: 750px;
     position:absolute;
-    top:100px;left:420px;
+    top:100px;left:470px;
     width:100%;
 }
 #signup>div:nth-of-type(1) {
@@ -137,3 +164,22 @@ section p{color:black;width:300px; font-size: 18px;}
 section article{position:absolute;top:100px;left:40px;width:300px;z-index:4;}
 
 .parallax-item{position:absolute;z-index:5;top:40px;left:400px;}
+.p2 {
+    font-size: 220px;
+    font-family:hotrod;
+    position: relative;
+    top: 360px;
+    text-align:center;
+    float:center;
+    width:100%;
+    display:block; 
+    color:#E3170D; 
+
+   text-shadow:
+       3px 3px #000,
+     -1px -1px #000,  
+      1px -1px #000,
+      -1px 1px #000,
+       1px 1px #000;
+
+}

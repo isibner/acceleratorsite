@@ -1,3 +1,6 @@
+var env = require('node-env-file');
+env(__dirname + '/.' + process.env.NODE_ENV + '_env')
+
 var express = require('express');
 var routes = require('./routes/routes.js');
 var path = require('path')
@@ -15,6 +18,9 @@ app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', routes.main);
+app.post('/apps', routes.new_app);
+app.get('/admin', routes.get_admin);
+app.post('/admin', routes.post_admin);
 
 console.log('PennApps Accelerator website');
 app.listen(app.get('port')).on('error', function(){

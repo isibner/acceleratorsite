@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.3/firebase.js'></script>
+
+</head>
+<body>
+ <section id="signup">
+        <article style="width:350px">
+        <h1 style="color: #d33; font-size: 50px">Authenticate thyself!</h1>   
+        </article>
+        <div class="parallax" data-velocity="-.1"></div>
+        <div class="parallax" data-velocity=".2" style="background-position: 50% 150px;">
+            <form role="form" id="form" method="post" action="admin">
+                <div class="form-group">
+                    <input type="text" name="secret" id="secret" class="form-control" placeholder="Put in the secret token.">
+                </div>
+                    <input type="submit" id="secret" value="Submit" class="btn btn-primary" style="background-color: hsl(0, 69%, 49%) !important;  border-color: #d32626 #d32626 hsl(0, 69%, 44%); margin-bottom: 50px;">
+
+          </form>
+        </div>
+</section>
+</header>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</body>
+</html>
