@@ -17,8 +17,9 @@ $(document).ready ->
               <div class="form-group">
                 <textarea type="text" id="comments" class="form-control" rows="5" placeholder="Relevant links - LinkedIn, Github, resume, past projects, or anything else that will help us make a decision."></textarea>
               </div></div>')
+        if nonce isnt 1
+            $("html, body").animate({ scrollTop: $(document).height() }, 500)
         nonce += 1
-        $("html, body").animate({ scrollTop: $(document).height() }, 500)
     append_to_form()
     $('#add-team-member').click ->
         append_to_form()
