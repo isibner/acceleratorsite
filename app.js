@@ -15,6 +15,10 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(function(err, req, res, next){
+  console.error(err.stack);
+  res.send(500, 'Well, looks like something broke! Try again in a few minutes, and if it\'s still broken, let us know at accelerator@pennapps.com');
+});
 
 app.get('/', routes.main);
 app.post('/apps', routes.new_app);
