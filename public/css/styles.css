@@ -39,6 +39,10 @@ section #signup{
     padding-bottom: 50px;
 }
 
+section ul {
+    font-size: 20px;
+}
+
 section:nth-of-type(1){background:whitesmoke;height:750px;}
 section:nth-of-type(2){background:black;height:750px;}
 
