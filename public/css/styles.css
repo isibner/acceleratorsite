@@ -35,6 +35,12 @@ section {
     padding: 0;
 }
 
+@media (min-width: 1000px) {
+    section {
+        overflow:hidden;
+    }
+}
+
 section #signup{
     padding-bottom: 50px;
 }
@@ -55,34 +61,36 @@ section:nth-of-type(2){background:black;height:750px;}
     top:0;left:0;
 }
 
-#story-freext>div:nth-of-type(2) {
-    background: url(../img/test.png) 50% 0 no-repeat;
-    background-size: 200px 200px;
-    margin: 0;
-    height: 750px;
-    position:absolute;
-    top:0px;
-    left:350px;
-    width:40%;
-}
+@media (min-width: 1000px) {
+    #story-freext>div:nth-of-type(2) {
+        background: url(../img/test.png) 50% 0 no-repeat;
+        background-size: 200px 200px;
+        margin: 0;
+        height: 750px;
+        position:absolute;
+        top:0px;
+        left:350px;
+        width:40%;
+    }
 
-#story-freext>div:nth-of-type(3) {
-    background: url(../img/learn2.png) 50% 0 no-repeat;
-    background-size: 200px 200px;
-    margin: 0;
-    height: 750px;
-    position:absolute;
-    top:60px;left:470px;
-    width:70%;
-}
-#story-freext>div:nth-of-type(4) {
-    background: url(../img/invest.png) 50% 0 no-repeat;
-    background-size: 200px 200px;
-    margin: 0;
-    height: 750px;
-    position:absolute;
-    top:125px;left:570px;
-    width:100%;
+    #story-freext>div:nth-of-type(3) {
+        background: url(../img/learn2.png) 50% 0 no-repeat;
+        background-size: 200px 200px;
+        margin: 0;
+        height: 750px;
+        position:absolute;
+        top:60px;left:470px;
+        width:70%;
+    }
+    #story-freext>div:nth-of-type(4) {
+        background: url(../img/invest.png) 50% 0 no-repeat;
+        background-size: 200px 200px;
+        margin: 0;
+        height: 750px;
+        position:absolute;
+        top:125px;left:570px;
+        width:100%;
+    }
 }
 #bottle>div:nth-of-type(1){
     background: url(../img/Penn_campus_2.jpg) 50% 0 no-repeat fixed;
@@ -119,34 +127,35 @@ margin: 0 auto;
     width:100%;
     top:0;left:0;
 }
+@media (min-width: 1000px) {
+    #tracks>div:nth-of-type(2) {
+        background: url(../img/hack2.png) 50% 0 no-repeat;
+        background-size: 200px 200px;
+        margin: 0;
+        height: 750px;
+        position:absolute;
+        top:0px;left:350px;
+        width:40%;
+    }
 
-#tracks>div:nth-of-type(2) {
-    background: url(../img/hack2.png) 50% 0 no-repeat;
-    background-size: 200px 200px;
-    margin: 0;
-    height: 750px;
-    position:absolute;
-    top:0px;left:350px;
-    width:40%;
-}
-
-#tracks>div:nth-of-type(3) {
-    background: url(../img/network.png) 50% 0 no-repeat;
-    background-size: 200px 200px;
-    margin: 0;
-    height: 750px;
-    position:absolute;
-    top:50px;left:470px;
-    width:70%;
-}
-#tracks>div:nth-of-type(4) {
-    background: url(../img/Dollar-sign.png) 50% 0 no-repeat;
-    background-size: 200px 200px;
-    margin: 0;
-    height: 750px;
-    position:absolute;
-    top:100px;left:570px;
-    width:100%;
+    #tracks>div:nth-of-type(3) {
+        background: url(../img/network.png) 50% 0 no-repeat;
+        background-size: 200px 200px;
+        margin: 0;
+        height: 750px;
+        position:absolute;
+        top:50px;left:470px;
+        width:70%;
+    }
+    #tracks>div:nth-of-type(4) {
+        background: url(../img/Dollar-sign.png) 50% 0 no-repeat;
+        background-size: 200px 200px;
+        margin: 0;
+        height: 750px;
+        position:absolute;
+        top:100px;left:570px;
+        width:100%;
+    }
 }
 #signup>div:nth-of-type(1) {
     background:white;
