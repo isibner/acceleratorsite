@@ -157,6 +157,16 @@ margin: 0 auto;
         width:100%;
     }
 }
+
+#tracks>div:nth-of-type(1) {
+    background:#d33;
+    margin: 0;
+    height: 750px;
+    position:absolute;
+    width:100%;
+    top:0;left:0;
+}
+
 #signup {
     min-height: 300px;
 }
@@ -184,6 +194,44 @@ margin: 0 auto;
     top:50px;left:400px;
     width:50%;
 }*/
+
+
+
+@media(min-width:768px) {
+    section {
+        padding: 150px 0;
+    }
+}
+
+.service-heading {
+    margin: 15px 0;
+    text-transform: none;
+}
+
+#portfolio .portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+}
+
+#portfolio .portfolio-item .portfolio-caption {
+    margin: 0 auto;
+    padding: 25px;
+    max-width: 400px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-caption p {
+    margin: 0;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+#portfolio * {
+    z-index: 2;
+}
+
 
 section h1{color:#d33;width:500px;font-size:65px;margin-bottom:14px;}
 section p{color:black;width:500px; font-size: 24px;}
