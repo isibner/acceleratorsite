@@ -213,6 +213,15 @@ margin: 0 auto;
     margin: 0 0 15px;
 }
 
+#portfolio .portfolio-heading {
+text-align: center;
+font-size: 65px;
+font-weight: 500;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+line-height: 60px;
+color: #E3170D;
+}
+
 #portfolio .portfolio-item .portfolio-caption {
     margin: 0 auto;
     padding: 25px;
@@ -226,11 +235,14 @@ margin: 0 auto;
     font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-style: italic;
+    width: 300px;
+
 }
 
 #portfolio * {
     z-index: 2;
 }
+
 
 section p{color:black;width:500px; font-size: 24px;}
 section article{position:absolute;top:100px;left:40px;width:500px;z-index:4;}
