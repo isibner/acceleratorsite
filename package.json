@@ -20,5 +20,12 @@
     "gulp-nodemon": "~0.1.2",
     "nodemon": "~1.0.14",
     "coffee-script": "~1.7.1"
+  },
+  "scripts": {
+    "test": "vows --spec --isolate",
+    "start": "node app.js",
+    "predeploy": "echo im about to deploy",
+    "postdeploy": "echo ive deployed",
+    "prepublish": "coffee --bare --compile --output lib/foo src/foo/*.coffee"
   }
 }

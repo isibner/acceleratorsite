@@ -1,9 +1,9 @@
-var env = require('node-env-file');
-env(__dirname + '/.' + process.env.NODE_ENV + '_env')
+// var env = require('node-env-file');
+// env(__dirname + '/.' + process.env.NODE_ENV + '_env');
 
 var express = require('express');
 var routes = require('./routes/routes.js');
-var path = require('path')
+var path = require('path');
 var app = express();
 
 app.set('port', process.env.PORT || 3000);
