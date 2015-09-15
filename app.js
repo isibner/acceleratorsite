@@ -24,6 +24,7 @@ app.get('/', routes.main);
 app.post('/apps', routes.new_app);
 app.get('/admin', routes.get_admin);
 app.post('/admin', routes.post_admin);
+app.get('/apply', routes.apply);
 
 console.log('PennApps Accelerator website');
 app.listen(app.get('port')).on('error', function(){
