@@ -30,6 +30,9 @@ var routes = {
     },
     apply : function(req, res){
         res.sendfile(path.join(__dirname, '../public/apply.html'));
+    },
+    join : function(req, res) {
+        res.redirect('/apply');
     }
 };
 
